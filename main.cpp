@@ -1,7 +1,30 @@
 #include <iostream>
 
+class tmp
+{
+public:
+    tmp(){
+      std::cout << "tmp's object is created" << std::endl;
+    }
+    ~tmp()
+    {
+      std::cout << "tmp's object is destroyed" << std::endl;
+    }
+};
+
+
+
+int func1()
+{
+  std::cout << "This is func1 !" << std::endl;
+  return 42;
+}
+
+int value1 = func1();
+
 int main() {
-  std::cout << "Hello, World!" << std::endl;
+
+  tmp tmp_object;
 
   int a[10] = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
   int i = 2;
